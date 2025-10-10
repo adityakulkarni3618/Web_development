@@ -1,1 +1,3 @@
-alert (("Welcome to the Train Passengers List Page!");
+function showMessage() {
+  alert("Form submitted successfully!");
+}

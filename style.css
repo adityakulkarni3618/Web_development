@@ -4,3 +4,16 @@ body {
 td {
     border : 2px solid black;
 }
+body {
+  background-color: lightblue;
+  font-family: Arial;
+}
+
+form {
+  width: 250px;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
