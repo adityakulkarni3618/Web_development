@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Form</title>
+  <title>Login Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form>
-    <label>Name</label>
-    <input type="text">
 
-    <label>City</label>
-    <input type="text">
+  <h2 class="heading">User Login</h2>
 
-    <label>Pincode</label>
-    <input type="number">
+  <form id="loginForm" class="form-box">
+    <label class="label">Username:</label>
+    <input type="text" id="username" class="input">
 
-    <button type="button" onclick="showMessage()">Submit</button>
+    <label class="label">Password:</label>
+    <input type="password" id="password" class="input">
+
+    <button type="button" id="loginBtn" class="button" onclick="loginUser()">Login</button>
   </form>
+
   <script src="script.js"></script>
 </body>
 </html>
