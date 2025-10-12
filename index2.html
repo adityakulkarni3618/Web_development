@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Click Example</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1>Welcome to Loupe</h1>
+    <button id="myButton">Click Me!</button>
+
+    <script>
+        // JavaScript code
+        $('#myButton').on('click', function onClick() {
+            setTimeout(function timer() {
+                console.log('You clicked the button!');    
+            }, 2000);
+        });
+
+        console.log("Hi!");
+        debugger
+        
+        setTimeout(function timeout() {
+            console.log("Click the button!");
+        }, 10000);
+        debugger
+
+        console.log("Welcome to loupe.");
+    </script>
+    
+</body>
+</html>

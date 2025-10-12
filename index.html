@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Form</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Media</title>
 </head>
-<body>
+<body bgcolor="lightblue">
 
-  <h2 class="heading">User Login</h2>
+  <h1 align="center">My Media</h1>
 
-  <form id="loginForm" class="form-box">
-    <label class="label">Username:</label>
-    <input type="text" id="username" class="input">
+  <h2>Music Videos</h2>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
 
-    <label class="label">Password:</label>
-    <input type="password" id="password" class="input">
+  <h2>Sports Videos</h2>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/IcrbM1l_BoI?playlist=IcrbM1l_BoI&loop=1&mute=1" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/5qap5aO4i9A?playlist=5qap5aO4i9A&loop=1&mute=1" allowfullscreen></iframe>
 
-    <button type="button" id="loginBtn" class="button" onclick="loginUser()">Login</button>
-  </form>
+  <h2>Educational Videos </h2>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/H14bBuluwB8" allowfullscreen></iframe>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 
-  <script src="script.js"></script>
+  <h2>Audios</h2>
+  <audio controls autoplay loop muted>
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+  </audio>
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
 </body>
 </html>
