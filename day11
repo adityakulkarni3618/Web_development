@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Tutorial 21 & 22</title>
+</head>
+<body style="font-family: Arial; background-color: lightyellow; padding: 15px;">
+
+  <h1>HTML Tutorial 21 & 22</h1>
+  <hr>
+
+  <h2>HTML Forms</h2>
+  <p>Forms are used to collect information from the user.</p>
+
+  <form action="#" method="post">
+    <label>Full Name:</label><br>
+    <input type="text" name="fullname" placeholder="Enter your name"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" placeholder="Enter your email"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" placeholder="Enter password"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <label>Skills:</label><br>
+    <input type="checkbox" name="skill" value="html"> HTML
+    <input type="checkbox" name="skill" value="css"> CSS
+    <input type="checkbox" name="skill" value="js"> JavaScript<br><br>
+
+    <label>Country:</label><br>
+    <select name="country">
+      <option>India</option>
+      <option>USA</option>
+      <option>UK</option>
+    </select><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" rows="4" cols="40" placeholder="Write something..."></textarea><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <hr>
+
+  <h2>HTML Media (Audio, Video & Iframe)</h2>
+
+  <h3>1. Audio Example</h3>
+  <audio controls>
+    <source src="1.mp3" type="audio/mpeg">
+  </audio>
+
+  <h3>2. Video Example</h3>
+  <video width="400" controls>
+    <source src="1.mp4" type="video/mp4">
+  </video>
+
+  <h3>3. Iframe Example</h3>
+  <iframe width="400" height="225" src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen>
+</iframe>
+
+</body>
+</html>
