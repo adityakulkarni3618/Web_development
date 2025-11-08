@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Tutorial 21 & 22</title>
+  <title>HTML Tutorial 23 & 24</title>
 </head>
-<body style="font-family: Arial; background-color: lightyellow; padding: 15px;">
+<body style="font-family: Arial; background-color: lightyellow;">
 
-  <h1>HTML Tutorial 21 & 22</h1>
+  <h1>HTML Tutorial 23 & 24</h1>
   <hr>
 
-  <h2>HTML Forms</h2>
-  <p>Forms are used to collect information from the user.</p>
+  <h2>HTML Entities</h2>
 
-  <form action="#" method="post">
-    <label>Full Name:</label><br>
-    <input type="text" name="fullname" placeholder="Enter your name"><br><br>
+  <p>HTML entities are used to show special symbols.</p>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" placeholder="Enter your email"><br><br>
+  <p>Examples:</p>
+  <p>&lt; = Less than</p>
+  <p>&gt; = Greater than</p>
+  <p>&amp; = Ampersand</p>
+  <p>&quot; = Double Quote</p>
+  <p>&copy; = Copyright</p>
+  <p>&#8377; = Rupee Symbol</p>
 
-    <label>Password:</label><br>
-    <input type="password" name="password" placeholder="Enter password"><br><br>
+  <p>Example sentence:</p>
+  <p>Price = 500 &#8377;</p>
 
-    <label>Gender:</label><br>
-    <input type="radio" name="gender" value="male"> Male
-    <input type="radio" name="gender" value="female"> Female<br><br>
+  <br><hr>
 
-    <label>Skills:</label><br>
-    <input type="checkbox" name="skill" value="html"> HTML
-    <input type="checkbox" name="skill" value="css"> CSS
-    <input type="checkbox" name="skill" value="js"> JavaScript<br><br>
+  <h2>HTML Semantic Tags</h2>
 
-    <label>Country:</label><br>
-    <select name="country">
-      <option>India</option>
-      <option>USA</option>
-      <option>UK</option>
-    </select><br><br>
+  <p>Semantic tags give meaning to the webpage structure.</p>
 
-    <label>Message:</label><br>
-    <textarea name="message" rows="4" cols="40" placeholder="Write something..."></textarea><br><br>
+  <p>Examples of Semantic Tags:</p>
+  <p>&lt;header&gt; , &lt;nav&gt; , &lt;section&gt; , &lt;article&gt; , &lt;footer&gt;</p>
 
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-  </form>
+  <p>Example:</p>
 
-  <hr>
+  <header style="background-color: lightblue;">
+    <h3>This is Header</h3>
+  </header>
 
-  <h2>HTML Media (Audio, Video & Iframe)</h2>
+  <nav style="background-color: lightgray;">
+    <p>This is Navigation Area</p>
+  </nav>
 
-  <h3>1. Audio Example</h3>
-  <audio controls>
-    <source src="1.mp3" type="audio/mpeg">
-  </audio>
+  <section style="background-color: lightgreen;">
+    <p>This is Main Section</p>
+  </section>
 
-  <h3>2. Video Example</h3>
-  <video width="400" controls>
-    <source src="1.mp4" type="video/mp4">
-  </video>
+  <article style="background-color: lightpink;">
+    <p>This is an Article</p>
+  </article>
 
-  <h3>3. Iframe Example</h3>
-  <iframe width="400" height="225" src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen>
-</iframe>
+  <footer style="background-color: lightcoral;">
+    <p>This is Footer</p>
+  </footer>
 
+<hr>
 </body>
 </html>
