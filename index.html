@@ -25,9 +25,9 @@
       color: white;
       cursor: pointer;
     }
-    button:nth-child(2) { background-color: #4CAF50; } /* Save */
-    button:nth-child(3) { background-color: #2196F3; } /* Show */
-    button:nth-child(4) { background-color: #f44336; } /* Delete */
+    .save { background-color: #4CAF50; }   /* Green */
+    .show { background-color: #2196F3; }   /* Blue */
+    .delete { background-color: #f44336; } /* Red */
     p {
       margin-top: 20px;
       font-size: 18px;
@@ -40,9 +40,9 @@
 
   <input type="text" id="name" placeholder="Enter your name">
   <br><br>
-  <button onclick="saveName()">Save</button>
-  <button onclick="showName()">Show</button>
-  <button onclick="deleteName()">Delete</button>
+  <button class="save" onclick="saveName()">Save</button>
+  <button class="show" onclick="showName()">Show</button>
+  <button class="delete" onclick="deleteName()">Delete</button>
 
   <p id="output"></p>
 
