@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Tutorial 23 & 24</title>
+  <title>Local Storage Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+      text-align: center;
+      padding: 40px;
+    }
+    h2 {
+      color: #333;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    button:nth-child(2) { background-color: #4CAF50; } /* Save */
+    button:nth-child(3) { background-color: #2196F3; } /* Show */
+    button:nth-child(4) { background-color: #f44336; } /* Delete */
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; background-color: lightyellow;">
+<body>
+  <h2>Local Storage Demo</h2>
 
-  <h1>HTML Tutorial 23 & 24</h1>
-  <hr>
+  <input type="text" id="name" placeholder="Enter your name">
+  <br><br>
+  <button onclick="saveName()">Save</button>
+  <button onclick="showName()">Show</button>
+  <button onclick="deleteName()">Delete</button>
 
-  <h2>HTML Entities</h2>
+  <p id="output"></p>
 
-  <p>HTML entities are used to show special symbols.</p>
+  <script>
+    function saveName() {
+      let name = document.getElementById("name").value;
+      localStorage.setItem("user", name);
+      alert("Name saved!");
+    }
 
-  <p>Examples:</p>
-  <p>&lt; = Less than</p>
-  <p>&gt; = Greater than</p>
-  <p>&amp; = Ampersand</p>
-  <p>&quot; = Double Quote</p>
-  <p>&copy; = Copyright</p>
-  <p>&#8377; = Rupee Symbol</p>
+    function showName() {
+      let name = localStorage.getItem("user");
+      if (name) {
+        document.getElementById("output").innerText = "Hello " + name + " 👋";
+      } else {
+        document.getElementById("output").innerText = "No name found.";
+      }
+    }
 
-  <p>Example sentence:</p>
-  <p>Price = 500 &#8377;</p>
-
-  <br><hr>
-
-  <h2>HTML Semantic Tags</h2>
-
-  <p>Semantic tags give meaning to the webpage structure.</p>
-
-  <p>Examples of Semantic Tags:</p>
-  <p>&lt;header&gt; , &lt;nav&gt; , &lt;section&gt; , &lt;article&gt; , &lt;footer&gt;</p>
-
-  <p>Example:</p>
-
-  <header style="background-color: lightblue;">
-    <h3>This is Header</h3>
-  </header>
-
-  <nav style="background-color: lightgray;">
-    <p>This is Navigation Area</p>
-  </nav>
-
-  <section style="background-color: lightgreen;">
-    <p>This is Main Section</p>
-  </section>
-
-  <article style="background-color: lightpink;">
-    <p>This is an Article</p>
-  </article>
-
-  <footer style="background-color: lightcoral;">
-    <p>This is Footer</p>
-  </footer>
-
-<hr>
+    function deleteName() {
+      localStorage.removeItem("user");
+      document.getElementById("output").innerText = "Name deleted!";
+    }
+  </script>
 </body>
 </html>
