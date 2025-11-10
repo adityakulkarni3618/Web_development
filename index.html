@@ -1,71 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Local Storage Example</title>
+  <title>Overflow and Position Example</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: lightblue;
       text-align: center;
-      padding: 40px;
+      font-family: Arial;
     }
-    h2 {
-      color: #333;
+
+    .overflow-box {
+      width: 200px;
+      height: 100px;
+      border: 2px solid blue;
+      margin: 20px auto;
+      overflow: auto;
+      background-color: white;
     }
-    input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 8px 12px;
-      margin: 5px;
-      border: none;
-      border-radius: 5px;
+
+    .pos-box {
+      width: 100px;
+      height: 100px;
       color: white;
-      cursor: pointer;
+      margin: 10px;
+      line-height: 100px;
     }
-    .save { background-color: #4CAF50; }  
-    .show { background-color: #2196F3; }  
-    .delete { background-color: #f44336; } 
-    p {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #444;
+
+    .static { background: red; position: static; }
+    .relative { background: green; position: relative; top: 20px; left: 20px; }
+    .absolute { background: blue; position: absolute; top: 60px; left: 140px; }
+
+    .pos-container {
+      height: 200px;
+      position: relative;
+      background: #d9f2ff;
+      margin: 20px auto;
+      width: 300px;
     }
   </style>
 </head>
 <body>
-  <h2>Local Storage Demo</h2>
 
-  <input type="text" id="name" placeholder="Enter your name">
-  <br><br>
-  <button class="save" onclick="saveName()">Save</button>
-  <button class="show" onclick="showName()">Show</button>
-  <button class="delete" onclick="deleteName()">Delete</button>
+  <h2>Overflow Example</h2>
+  <div class="overflow-box">
+    This box has limited space.  
+    When content is more, you can scroll inside it.  
+    ...........................
+    ...........................
+    ...........................
+  </div>
 
-  <p id="output"></p>
+  <h2>Position Example</h2>
+  <div class="pos-container">
+    <div class="pos-box static">Static</div>
+    <div class="pos-box relative">Relative</div>
+    <div class="pos-box absolute">Absolute</div>
+  </div>
 
-  <script>
-    function saveName() {
-      let name = document.getElementById("name").value;
-      localStorage.setItem("user", name);
-      alert("Name saved!");
-    }
-
-    function showName() {
-      let name = localStorage.getItem("user");
-      if (name) {
-        document.getElementById("output").innerText = "Hello " + name + " 👋";
-      } else {
-        document.getElementById("output").innerText = "No name found.";
-      }
-    }
-
-    function deleteName() {
-      localStorage.removeItem("user");
-      document.getElementById("output").innerText = "Name deleted!";
-    }
-  </script>
 </body>
 </html>
