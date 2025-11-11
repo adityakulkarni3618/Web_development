@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flexbox & Grid Simple Example</title>
+  <title>Simple CSS Selectors Example</title>
   <style>
     body {
-      font-family: Arial;
       background-color: lightyellow;
       text-align: center;
-      padding: 20px;
+      font-family: Arial;
     }
 
-    h2 {
-      color: darkblue;
+    p {
+      color: green;
     }
 
-    .flex-container {
-      display: flex;
-      background-color: #e6f3ff;
-      padding: 10px;
-      border: 2px solid blue;
-      justify-content: space-around;
+    .highlight {
+      color: red;
     }
 
-    .flex-item {
-      background-color: green;
-      color: white;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: 3; 
-      gap: 10px;
-      background-color: #f0e6ff;
-      padding: 10px;
-      border: 2px solid purple;
-      margin-top: 20px;
+    #special {
+      color: blue;
     }
 
-    .grid-item {
-      background-color: purple;
-      color: white;
-      padding: 20px;
-      border-radius: 5px;
+    a[target="_blank"] {
+      color: purple;
     }
 
+    li:nth-child(odd) {
+      background-color: lightcyan;
+    }
+
+    li:nth-child(even) {
+      background-color: lightpink;
+    }
   </style>
 </head>
 <body>
 
-  <h2>Flexbox Example</h2>
-  <div class="flex-container">
-    <div class="flex-item">Item 1</div>
-    <div class="flex-item">Item 2</div>
-    <div class="flex-item">Item 3</div>
-  </div>
+  <h2>CSS Selectors</h2>
 
-  <h2>Grid Example</h2>
-  <div class="grid-container">
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>
-  </div>
+  <p>This is a normal paragraph.</p>
+  <p class="highlight">This is a class selector example.</p>
+  <p id="special">This is an ID selector example.</p>
+
+  <a href="https://www.google.com" target="_blank">Visit Google</a>
+
+  <h2>nth-child Example</h2>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+    <li>Orange</li>
+  </ul>
 
 </body>
 </html>
