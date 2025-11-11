@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Overflow and Position Example</title>
+  <title>Flexbox & Grid Simple Example</title>
   <style>
     body {
-      background-color: lightblue;
-      text-align: center;
       font-family: Arial;
+      background-color: lightyellow;
+      text-align: center;
+      padding: 20px;
     }
 
-    .overflow-box {
-      width: 200px;
-      height: 100px;
+    h2 {
+      color: darkblue;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: #e6f3ff;
+      padding: 10px;
       border: 2px solid blue;
-      margin: 20px auto;
-      overflow: auto;
-      background-color: white;
+      justify-content: space-around;
     }
 
-    .pos-box {
-      width: 100px;
-      height: 100px;
+    .flex-item {
+      background-color: green;
       color: white;
-      margin: 10px;
-      line-height: 100px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 3; 
+      gap: 10px;
+      background-color: #f0e6ff;
+      padding: 10px;
+      border: 2px solid purple;
+      margin-top: 20px;
     }
 
-    .static { background: red; position: static; }
-    .relative { background: green; position: relative; top: 20px; left: 20px; }
-    .absolute { background: blue; position: absolute; top: 60px; left: 140px; }
-
-    .pos-container {
-      height: 200px;
-      position: relative;
-      background: #d9f2ff;
-      margin: 20px auto;
-      width: 300px;
+    .grid-item {
+      background-color: purple;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
     }
+
   </style>
 </head>
 <body>
 
-  <h2>Overflow Example</h2>
-  <div class="overflow-box">
-    This box has limited space.  
-    When content is more, you can scroll inside it.  
-    ...........................
-    ...........................
-    ...........................
+  <h2>Flexbox Example</h2>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
   </div>
 
-  <h2>Position Example</h2>
-  <div class="pos-container">
-    <div class="pos-box static">Static</div>
-    <div class="pos-box relative">Relative</div>
-    <div class="pos-box absolute">Absolute</div>
+  <h2>Grid Example</h2>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
   </div>
 
 </body>
