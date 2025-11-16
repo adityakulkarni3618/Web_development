@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Position & Z-Index</title>
-
+  <title>Flexbox Example</title>
   <style>
-    .box{
-      width:100px;
-      height:100px;
-      background:lightblue;
-      margin:10px;
+    body{
+      font-family: Arial;
+      margin: 0;
+      padding: 20px;
     }
 
-    .relative{
-      position:relative;
-      top:10px;
-      left:10px;
-      background:lightgreen;
+    h1{
+      text-align: center;
     }
 
-    .absolute{
-      position:absolute;
-      top:150px;
-      left:150px;
-      background:pink;
+    .flex-row{
+      display: flex;
+      border: 2px solid black;
+      margin-top: 20px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
     }
 
-    .fixed{
-      position:fixed;
-      bottom:10px;
-      right:10px;
-      background:orange;
+    .flex-column{
+      display: flex;
+      border: 2px solid black;
+      margin-top: 20px;
+      padding: 10px;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .sticky{
-      position:sticky;
-      top:0;
-      background:yellow;
+    .flex-wrap{
+      display: flex;
+      border: 2px solid black;
+      margin-top: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .z1{
-      width:80px;
-      height:80px;
-      background:red;
-      position:absolute;
-      top:300px;
-      left:20px;
-      z-index:1;
-    }
-
-    .z2{
-      width:80px;
-      height:80px;
-      background:blue;
-      position:absolute;
-      top:320px;
-      left:40px;
-      z-index:3;
+    .item{
+      background: lightblue;
+      padding: 15px;
+      text-align: center;
+      flex: 0 0 80px;
     }
   </style>
 </head>
 <body>
 
-  <div class="sticky">Sticky Box</div>
+  <h1>Flexbox</h1>
 
-  <div class="box">Static</div>
+  <h2>Row with center alignment</h2>
+  <div class="flex-row">
+    <div class="item">Box 1</div>
+    <div class="item">Box 2</div>
+    <div class="item">Box 3</div>
+  </div>
 
-  <div class="box relative">Relative</div>
+  <h2>Column direction</h2>
+  <div class="flex-column">
+    <div class="item">Box A</div>
+    <div class="item">Box B</div>
+    <div class="item">Box C</div>
+  </div>
 
-  <div class="box absolute">Absolute</div>
-
-  <div class="box fixed">Fixed</div>
-
-  <div class="z1"></div>
-  <div class="z2"></div>
+  <h2>Wrap example</h2>
+  <div class="flex-wrap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
 
 </body>
 </html>
