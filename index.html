@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Transition and Transform</title>
+  <title>Simple Navbar Page</title>
   <style>
-    .box{
-      width: 100px;
-      height: 100px;
-      background: lightblue;
-      margin: 50px;
-      transition: all 0.5s;
+    body{
+      margin: 0;
+      font-family: Arial;
     }
 
-    .box:hover{
-      transform: scale(1.2) rotate(10deg);
-      background: lightgreen;
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      background: black;
+      padding: 10px;
+      color: white;
+    }
+
+    .links a{
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .hero{
+      text-align: center;
+      padding: 30px;
+      background: lightgray;
+    }
+
+    .row{
+      display: flex;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .box{
+      border: 1px solid gray;
+      padding: 10px;
+      flex: 1;
     }
   </style>
 </head>
 <body>
 
-  <h2>Simple Transition + Transform</h2>
+  <div class="navbar">
+    <div class="logo">MySite</div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
 
-  <div class="box"></div>
+  <div class="hero">
+    <h1>Welcome</h1>
+    <p>Simple page with navbar and boxes.</p>
+  </div>
 
-  <p>Move mouse on the blue box.</p>
+  <div class="row">
+    <div class="box">
+      <h3>Box 1</h3>
+      <p>Some text here.</p>
+    </div>
+    <div class="box">
+      <h3>Box 2</h3>
+      <p>Some text here.</p>
+    </div>
+    <div class="box">
+      <h3>Box 3</h3>
+      <p>Some text here.</p>
+    </div>
+  </div>
 
 </body>
 </html>
