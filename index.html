@@ -1,77 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Navbar Page</title>
+  <title>Simple Buttons</title>
   <style>
     body{
-      margin: 0;
       font-family: Arial;
-    }
-
-    .navbar{
-      display: flex;
-      justify-content: space-between;
-      background: black;
-      padding: 10px;
-      color: white;
-    }
-
-    .links a{
-      color: white;
-      text-decoration: none;
-      margin-left: 10px;
-      font-size: 14px;
-    }
-
-    .hero{
-      text-align: center;
-      padding: 30px;
-      background: lightgray;
-    }
-
-    .row{
-      display: flex;
       padding: 20px;
-      gap: 10px;
     }
 
-    .box{
-      border: 1px solid gray;
-      padding: 10px;
-      flex: 1;
+    .btn{
+      padding: 8px 16px;
+      border: 1px solid black;
+      background: white;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .btn-main{
+      background: blue;
+      color: white;
+      border: none;
+    }
+
+    .btn-border{
+      background: white;
+      color: blue;
+      border: 1px solid blue;
+    }
+
+    .btn:hover{
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo">MySite</div>
-    <div class="links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
+  <h2>Simple Button Styles</h2>
 
-  <div class="hero">
-    <h1>Welcome</h1>
-    <p>Simple page with navbar and boxes.</p>
-  </div>
+  <button class="btn btn-main">Main Button</button>
+  <button class="btn btn-border">Outline Button</button>
+  <button class="btn">Normal Button</button>
 
-  <div class="row">
-    <div class="box">
-      <h3>Box 1</h3>
-      <p>Some text here.</p>
-    </div>
-    <div class="box">
-      <h3>Box 2</h3>
-      <p>Some text here.</p>
-    </div>
-    <div class="box">
-      <h3>Box 3</h3>
-      <p>Some text here.</p>
-    </div>
-  </div>
+  <p>Move mouse on buttons to see hover effect.</p>
 
 </body>
 </html>
