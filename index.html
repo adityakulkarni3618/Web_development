@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Form</title>
+  <title>Registration Form with Check</title>
   <style>
     body{
       font-family: Arial;
@@ -12,7 +12,7 @@
     .form-box{
       background: white;
       padding: 20px;
-      max-width: 300px;
+      max-width: 320px;
       border: 1px solid #ccc;
     }
 
@@ -22,12 +22,14 @@
       font-size: 14px;
     }
 
-    input{
+    input, textarea{
       width: 100%;
       padding: 6px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
       border-radius: 3px;
+      font-family: Arial;
+      font-size: 14px;
     }
 
     button{
@@ -45,20 +47,47 @@
 </head>
 <body>
 
-  <h2>Simple Registration Form</h2>
+  <h2>Registration Form (Next Part)</h2>
 
   <div class="form-box">
     <label>Name</label>
-    <input type="text">
+    <input type="text" id="name">
 
     <label>Email</label>
-    <input type="email">
+    <input type="email" id="email">
 
     <label>Password</label>
-    <input type="password">
+    <input type="password" id="password">
 
-    <button>Submit</button>
+    <label>Confirm Password</label>
+    <input type="password" id="confirmPassword">
+
+    <label>Message (optional)</label>
+    <textarea id="message" rows="3"></textarea>
+
+    <button onclick="submitForm()">Submit</button>
   </div>
+
+  <script>
+    function submitForm(){
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if(name === "" || email === "" || password === "" || confirmPassword === ""){
+        alert("Please fill all required fields.");
+        return;
+      }
+
+      if(password !== confirmPassword){
+        alert("Password and Confirm Password do not match.");
+        return;
+      }
+
+      alert("Form submitted successfully!");
+    }
+  </script>
 
 </body>
 </html>
