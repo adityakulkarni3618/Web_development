@@ -1,93 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration Form with Check</title>
+  <title>Bounce Animation</title>
   <style>
     body{
       font-family: Arial;
-      padding: 20px;
       background: #f2f2f2;
-    }
-
-    .form-box{
-      background: white;
+      margin: 0;
       padding: 20px;
-      max-width: 320px;
+      text-align: center;
+    }
+
+    h2{
+      margin-bottom: 30px;
+    }
+
+    .box-area{
+      height: 300px;
       border: 1px solid #ccc;
+      background: white;
+      position: relative;
+      margin: 0 auto;
+      max-width: 400px;
     }
 
-    label{
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
+    .ball{
+      width: 50px;
+      height: 50px;
+      background: orange;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
     }
 
-    input, textarea{
-      width: 100%;
-      padding: 6px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      font-family: Arial;
-      font-size: 14px;
+    .ball:hover{
+      animation-duration: 0.5s; 
     }
 
-    button{
-      padding: 8px 16px;
-      border: none;
-      background: blue;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover{
-      opacity: 0.9;
+    @keyframes bounce{
+      0%{
+        top: 10px;
+      }
+      50%{
+        top: 230px;
+      }
+      100%{
+        top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h2>Registration Form (Next Part)</h2>
+  <h2>Bounce Animation (Exercise 8 Style)</h2>
 
-  <div class="form-box">
-    <label>Name</label>
-    <input type="text" id="name">
-
-    <label>Email</label>
-    <input type="email" id="email">
-
-    <label>Password</label>
-    <input type="password" id="password">
-
-    <label>Confirm Password</label>
-    <input type="password" id="confirmPassword">
-
-    <label>Message (optional)</label>
-    <textarea id="message" rows="3"></textarea>
-
-    <button onclick="submitForm()">Submit</button>
+  <div class="box-area">
+    <div class="ball"></div>
   </div>
-
-  <script>
-    function submitForm(){
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var confirmPassword = document.getElementById("confirmPassword").value;
-
-      if(name === "" || email === "" || password === "" || confirmPassword === ""){
-        alert("Please fill all required fields.");
-        return;
-      }
-
-      if(password !== confirmPassword){
-        alert("Password and Confirm Password do not match.");
-        return;
-      }
-
-      alert("Form submitted successfully!");
-    }
-  </script>
 
 </body>
 </html>
